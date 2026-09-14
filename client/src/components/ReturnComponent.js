@@ -5,12 +5,10 @@ import Loading from './LoadingComponent.js';
 
 const fineRate=1;
 var totalFine=0;
-const allowedDays=30;
 function RenderIssue ({issue,i,returnBook}) {
     const dates=[];
     const today= new Date();
     dates.push(today);
-    const issueDate=new Date(Date.parse(issue.createdAt));
     const deadline = new Date( Date.parse(issue.createdAt));
     deadline.setDate(deadline.getDate()+30);
     dates.push(deadline);

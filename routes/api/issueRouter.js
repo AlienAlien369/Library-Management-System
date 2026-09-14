@@ -111,7 +111,7 @@ issueRouter.route('/')
     //res.statusCode = 403;
     //res.end('DELETE operation not supported on /issues');
     
-    Issue.remove({})
+    Issue.deleteMany({})
     .then((resp) => {
         console.log("Removed All Issue");
         res.statusCode = 200;

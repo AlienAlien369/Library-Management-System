@@ -340,7 +340,7 @@ export const loginUser = (creds) => (dispatch) => {
       }
   })
   .catch(error => {
-    alert(error.message+'\n'+"Username and password didn't match");
+    alert(error.message+"\nUsername and password didn't match");
      return dispatch(loginError(error.message));})
 };
 
